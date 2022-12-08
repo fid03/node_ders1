@@ -6,14 +6,14 @@ app.get('/', (req, res) => {
     res.send("Server response on / route")
 })
 
-app.get('/test', (req, res) => {
-    let obj = {
-        name: 'admin',
-        user: 'admin',
-        id: 1,
-        test: false
-    }
-    res.json(obj)
+app.get('/user/:id', (req, res) => {
+   const arr=[{id:1,name:'ted'},{id:2,name:'jhon'},{id:3,name:'therson'}]
+
+   const user=arr.find(el=>el.id==req.params.id)
+   if(user){
+    
+   }
+
 })
 
 app.get('/employees', (req, res) => {
